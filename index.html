@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vip Game Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqXzGOVfkgJGskFrd1NRFikvKzZ47fRldiQ&usqp=CAU') center/cover no-repeat; /* Replace 'your-image-url.jpg' with the actual path to your image */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        .login-container form button {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Vip Game Login</h2>
+        <form>
+            <input type="password" id="passwordInput" placeholder="Password" required>
+            <button type="button" onclick="checkPassword()">Login</button>
+        </form>
+    </div>
+    <script>
+        function checkPassword() {
+            const enteredPassword = document.getElementById('passwordInput').value;
+            const correctPassword = 'This is a real Vip predictionapp'; // Replace with your correct password
+            if (enteredPassword.trim() === '') {
+                // Show error message for empty password
+                alert('Please enter your password.');
+                return; // Exit the function early if password is empty
+            }
+            if (enteredPassword === correctPassword) {
+                // Redirect to a success page
+                window.location.href = 'Sure-Vip Game.html';
+            } else {
+                // Show error message for incorrect password
+                alert('Incorrect password. Please buy a new one and try again. The Password Amount is N5,500');
+                clearInput(); // Optional: Clear the input field for retry
+                // Redirect to an error page (you can customize this URL)
+                window.location.href = 'request password.html';
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('passwordInput').value = '';
+        }
+
+        // Popup message function
+        window.onload = function() {
+            alert("This website/app was created for those who are looking for sure game not sure correct score because most of the correct score are not 100% sure and the highest odd this website/app generate is 50odds\nFor more information kindly message the creator on WhatsApp +2348138273086");
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment-method.html</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqXzGOVfkgJGskFrd1NRFikvKzZ47fRldiQ&usqp=CAU');
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust to your preference */
+    }
+
+    .payment-buttons {
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons horizontally */
+      margin: 20px;
+    }
+
+    .payment-button {
+      position: relative;
+      padding: 20px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 2px solid #ff000a;
+      border-radius: 10px;
+      background-color: #ff000a;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      margin: 10px; /* Add margin for spacing between buttons */
+      width: 200px; /* Adjust width as needed */
+    }
+
+    .payment-button:hover {
+      background-color: #ff000a;
+    }
+
+    .button-image {
+      width: 100%; /* Ensure the image takes up the full width of the button */
+      border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Place the image behind the button content */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Select Payment Method</h2>
+
+  <div class="payment-buttons">
+    <a class="payment-button" href="Bank transfer.html">
+      <img class="button-image" src="bank-transfer-image.jpg" alt="Bank Transfer">
+      Bank Transfer
+    </a>
+    
+    <a class="payment-button" href="https://finaz.com.ng/9/form.php?user=74471&ref=74471">
+      <img class="button-image" src="bank-card-image.jpg" alt="Bank Card">
+      Bank Card
+    </a>
+
+    <!-- Add another payment method button -->
+    <a class="payment-button" href="https://wa.me/message/UJIN24GJJVCSB1">
+      <img class="button-image" src="another-payment-image.jpg" alt="Pay Via WhatsApp ">
+      Pay Via WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>

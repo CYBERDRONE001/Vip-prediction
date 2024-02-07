@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqXzGOVfkgJGskFrd1NRFikvKzZ47fRldiQ&usqp=CAU');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .bank-details-container {
+            background-color: #ff0a00;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .bank-details-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .bank-details {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .payment-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .payment-button:hover {
+            background-color: #0056b3;
+        }
+        .payment-status-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .loading-spinner {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .payment-status-message {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bank-details-container">
+        <h2>Bank Account Details for Transfer</h2>
+        <div class="bank-details">
+            <p>Account Name: ISIAKA OLAOYE</p>
+            <p>Account Number: 8138273086</p>
+            <p>Bank Name: PALMPAY Digital LTD</p>
+            <p>Amount: N4,500.00</p>
+            <p>SWIFT Code: Password 🔑</p>
+        </div>
+        <button class="payment-button" onclick="startTimer()">I have made a payment</button>
+    </div>
+
+    <div class="payment-status-popup" id="paymentStatusPopup">
+        <div class="loading-spinner"></div>
+        <p class="payment-status-message" id="paymentStatusMessage"></p>
+    </div>
+
+    <script>
+        function startTimer() {
+            setTimeout(showPaymentStatus, 1000); // Simulating payment confirmation after 1 seconds (adjust as needed)
+            setTimeout(showPaymentTimeoutMessage, 60000); // Show timeout message after 1 minutes
+        }
+
+        function showPaymentStatus() {
+            document.getElementById('paymentStatusPopup').style.display = 'flex';
+            document.getElementById('paymentStatusMessage').innerText = 'Confirming Your Payment, Kindly wait.';
+        }
+
+        function showPaymentTimeoutMessage() {
+            document.getElementById('paymentStatusMessage').innerText = 'Your payment hasn\'t been confirmed. Kindly wait for your payment to be confirmed.';
+        }
+    </script>
+</body>
+</html>
