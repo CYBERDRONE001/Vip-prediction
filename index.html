@@ -48,6 +48,14 @@
         .login-container form button:hover {
             background-color: #0056b3;
         }
+        .buy-password-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +95,25 @@
         // Popup message function
         window.onload = function() {
             alert("This website/app was created for those who are looking for sure game not sure correct score because most of the correct score are not 100% sure and the highest odd this website/app generate is 50odds\nFor more information kindly message the creator on WhatsApp +2348138273086");
+            showNotification();
         };
+
+        // Function to show a notification
+        function showNotification() {
+            if ('Notification' in window) {
+                // Check if the browser supports notifications
+                Notification.requestPermission().then(function(result) {
+                    if (result === 'granted') {
+                        // Permission granted, show the notification
+                        var notification = new Notification('New Update!', {
+                            body: 'New matches have been added!',
+                            icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqXzGOVfkgJGskFrd1NRFikvKzZ47fRldiQ&usqp=CAU' // Replace with the URL of your notification icon
+                        });
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
+
