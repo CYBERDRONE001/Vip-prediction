@@ -4,41 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sure-Vip Game</title>
-    <body>
-
-    <h1>Vip Betting Prediction Results</h1>
-    <hr>
-
-    <p>Match 1: Vitoria Guimarares vs Gil Vicente Barcelos</p>
-    <p>Pick: <span class="pick">Correct Score 2:0</span></p>
-        <p>Odd: <span class="Odds">6.91</span></p>
-  </div>
-    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
-    <hr>
-    <p style="margin-bottom: 50px;">
-
-    <p style="margin-bottom: 25px;">Match 2:Guarany de Bage FC vs SER Caxias do S</p>
-    <p>Pick: <span class="pick">1x2 Away</span></p>
-        Odd: <span class="Odds">2.20</span></p>
-  </div>
-        <p>Status: <span class="pending">Pending 🕜🕜</span></p>
-    <hr>
-    <p style="margin-bottom: 25px;">Match 3: Al Taraji vs Al Faisaly</p>
-    <p>Pick: <span class="pick">Correct Score 1-2</span></p>
-        Odd: <span class="Odds">2.20</span></p>
-  </div>
-    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
-    <hr>
-        <p style="margin-bottom: 25px;">Match 4:Zenit st. Petersburg vs Shanghai Shenhua</p>
-    <p>Pick: <span class="pick">1X2 Home</span></p>
-        Odd: <span class="Odds">1.50</span></p>
-  </div>
-    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
-    <hr>
-
-    <!-- Add more matches as needed -->
-
-</body>
     <style>
         html, body {
             height: 30%;
@@ -97,11 +62,61 @@
             margin-bottom: 20px;
         }
         .pending {
-      color: #ff8c00;
-      font-weight: bold;
-    }
-    </style>
-    
+            color: #ff8c00;
+            font-weight: bold;
+        }
     </style>
 </head>
+<body>
+    <h1>Vip Betting Prediction Results</h1>
+    <hr>
+
+    <p>Match 1: Vitoria Guimarares vs Gil Vicente Barcelos</p>
+    <p>Pick: <span class="pick">Correct Score 2:0</span></p>
+    <p>Odd: <span class="Odds">6.91</span></p>
+    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
+    <hr>
+
+    <p style="margin-bottom: 25px;">Match 2:Guarany de Bage FC vs SER Caxias do S</p>
+    <p>Pick: <span class="pick">1x2 Away</span></p>
+    <p>Odd: <span class="Odds">2.20</span></p>
+    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
+    <hr>
+
+    <p style="margin-bottom: 25px;">Match 3: Al Taraji vs Al Faisaly</p>
+    <p>Pick: <span class="pick">Correct Score 1-2</span></p>
+    <p>Odd: <span class="Odds">2.20</span></p>
+    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
+    <hr>
+
+    <p style="margin-bottom: 25px;">Match 4:Zenit st. Petersburg vs Shanghai Shenhua</p>
+    <p>Pick: <span class="pick">1X2 Home</span></p>
+    <p>Odd: <span class="Odds">1.50</span></p>
+    <p>Status: <span class="pending">Pending 🕜🕜</span></p>
+    <hr>
+
+    <!-- Add more matches as needed -->
+
+    <script>
+        // Check if the browser supports notifications
+        if ('Notification' in window) {
+            // Request permission to show notifications
+            Notification.requestPermission();
+        }
+
+        // Function to show a notification
+        function showNotification() {
+            if (Notification.permission === 'granted') {
+                // Create a new notification
+                var notification = new Notification('New Update!', {
+                    body: 'New matches have been added!',
+                    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqXzGOVfkgJGskFrd1NRFikvKzZ47fRldiQ&usqp=CAU' // Replace with the URL of your notification icon
+                });
+            }
+        }
+
+        // Call the function to show notification when something is updated or added on the website
+        showNotification();
+    </script>
+</body>
 </html>
